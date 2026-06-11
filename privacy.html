@@ -1,61 +1,112 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Kwan & Som</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-               background: #f9f9f9; color: #333; line-height: 1.7; }
-        .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-        h1 { font-size: 28px; margin-bottom: 8px; color: #ff7e5f; }
-        .date { color: #999; font-size: 14px; margin-bottom: 32px; }
-        h2 { font-size: 20px; margin: 32px 0 12px; color: #444; }
-        p, li { margin-bottom: 12px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+               background: #fafafa; color: #333; line-height: 1.75; }
+        .container { max-width: 740px; margin: 0 auto; padding: 56px 28px; }
+        .header { border-bottom: 3px solid #FF6B35; padding-bottom: 20px; margin-bottom: 36px; }
+        h1 { font-size: 30px; color: #222; font-weight: 700; }
+        .meta { color: #888; font-size: 14px; margin-top: 6px; }
+        h2 { font-size: 20px; margin: 36px 0 12px; color: #333; font-weight: 600; }
+        p, li { margin-bottom: 12px; font-size: 15px; color: #444; }
         ul { padding-left: 24px; }
-        a { color: #ff7e5f; }
+        a { color: #FF6B35; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .scope-box { background: #fff8f5; border-radius: 12px; padding: 18px 22px; margin: 16px 0; 
+                     border-left: 4px solid #FF6B35; }
+        .scope-box strong { color: #FF6B35; }
+        .back { display: inline-block; margin-top: 40px; padding: 10px 24px; 
+                background: #FF6B35; color: white; border-radius: 8px; font-weight: 600; 
+                font-size: 14px; text-decoration: none; }
+        .back:hover { background: #e85d2c; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🔒 Privacy Policy</h1>
-        <p class="date">Last updated: June 3, 2026</p>
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p class="meta">Kwan &amp; Som &middot; Last updated: June 11, 2026</p>
+        </div>
 
-        <p>This Privacy Policy explains how Kwan & Som ("we", "our", or "us") collects, uses, and protects information when you use our application integration.</p>
+        <p>This Privacy Policy explains how Kwan &amp; Som ("we", "our", or "us") collects, uses, and protects information when you use our TikTok API integration ("the App").</p>
 
         <h2>1. Information We Access</h2>
-        <p>Our application requests the following permissions from your social media account:</p>
+        <p>Our application requests the following TikTok API scopes. Each scope is requested for a specific, limited purpose:</p>
+
+        <div class="scope-box">
+            <p><strong>user.info.basic</strong> — Public profile information (display name, avatar, username)</p>
+            <p><em>Purpose:</em> To identify the authenticated account within the App interface and personalize the creator experience. This data is displayed only to the authenticated user.</p>
+            <p><em>Storage:</em> Not stored permanently. Held in memory during the active session only.</p>
+        </div>
+
+        <div class="scope-box">
+            <p><strong>user.info.stats</strong> — Account statistics (follower count, engagement metrics)</p>
+            <p><em>Purpose:</em> To provide creators with basic content performance feedback within the App, helping them understand their audience without leaving the publishing workflow.</p>
+            <p><em>Storage:</em> Not stored. Read in real-time and displayed to the authenticated user only.</p>
+        </div>
+
+        <div class="scope-box">
+            <p><strong>video.upload</strong> — Upload video files to TikTok servers</p>
+            <p><em>Purpose:</em> Core App functionality — upload AI-generated animated content to TikTok for publishing. Videos are processed in-memory and uploaded directly.</p>
+            <p><em>Storage:</em> No video files are stored on our servers. Upload is a direct pass-through operation.</p>
+        </div>
+
+        <div class="scope-box">
+            <p><strong>video.publish</strong> — Publish uploaded videos to the creator's profile</p>
+            <p><em>Purpose:</em> Core App functionality — publish uploaded videos as public posts on the creator's TikTok account. Publication only occurs with explicit creator authorization.</p>
+            <p><em>Storage:</em> No publishing records are stored. Each publish action is a one-time API call.</p>
+        </div>
+
+        <h2>2. How We Use Information</h2>
+        <p>All data accessed through TikTok API scopes is used <strong>solely within the scope of providing the content publishing service</strong>. Specifically:</p>
         <ul>
-            <li><strong>Basic Profile Information (user.info.basic)</strong> — We access your public profile (display name, avatar, username) to personalize the app experience and identify the account publishing content.</li>
-            <li><strong>Account Statistics (user.info.stats)</strong> — We access follower count and engagement metrics to help creators understand their content performance.</li>
-            <li><strong>Content Publishing (video.publish, video.upload)</strong> — We upload and publish video content on behalf of the authenticated creator. This is the core functionality of our app — enabling AI-assisted content creation and publishing.</li>
+            <li>To display the connected account name within the App interface</li>
+            <li>To upload and publish animated video content as authorized by the creator</li>
+            <li>To provide basic engagement statistics for content performance feedback</li>
         </ul>
 
-        <h2>2. How We Use This Information</h2>
+        <h2>3. Data Storage & Retention</h2>
         <ul>
-            <li>To <strong>publish content</strong> — uploading and posting animated videos to the creator's account as authorized.</li>
-            <li>To <strong>display account information</strong> — showing the connected account name within the app interface for user feedback.</li>
-            <li>To <strong>provide performance insights</strong> — showing basic engagement statistics to help creators improve their content.</li>
-        </ul>
-        <p>All data accessed is used <strong>solely within the scope of providing the content publishing service</strong>. We do not share, sell, or transfer your data to third parties.</p>
-
-        <h2>3. Data Storage</h2>
-        <ul>
-            <li>We do <strong>not</strong> permanently store your profile data on our servers.</li>
-            <li>Access tokens are stored temporarily in memory during the active session only.</li>
-            <li>Video content is processed in-memory and published directly — no file storage of user content.</li>
+            <li><strong>No permanent storage:</strong> We do not store user profile data, video content, or publishing records on any server or database.</li>
+            <li><strong>Session-only tokens:</strong> OAuth access tokens are held in memory during the active session and discarded upon logout, token expiration, or app closure.</li>
+            <li><strong>No logs:</strong> We do not maintain access logs, usage logs, or analytics databases containing user data.</li>
         </ul>
 
-        <h2>4. Data Security</h2>
-        <p>We implement industry-standard security measures including OAuth 2.0 authentication, encrypted HTTPS communication, and secure token handling. Access credentials are never logged, stored in plain text, or shared.</p>
+        <h2>4. Data Sharing</h2>
+        <p>We do <strong>not</strong> share, sell, rent, trade, or transfer any user data to third parties. No data leaves the App's in-memory session context. We have no advertising partners, analytics providers, or data brokers integrated into the App.</p>
 
-        <h2>5. Your Rights</h2>
-        <p>You may revoke our app's access at any time through your social media account settings (Settings → Security → Apps & Sessions). Upon revocation, all temporary session data is immediately discarded.</p>
+        <h2>5. Data Security</h2>
+        <p>We implement the following security measures:</p>
+        <ul>
+            <li><strong>OAuth 2.0 PKCE:</strong> Industry-standard secure authorization flow with code challenge verification</li>
+            <li><strong>HTTPS encryption:</strong> All API communication is encrypted in transit via TLS</li>
+            <li><strong>Memory-only tokens:</strong> Access credentials are never written to disk, logs, or databases</li>
+            <li><strong>No credential storage:</strong> Client secrets are never hardcoded or stored in the application package</li>
+        </ul>
 
-        <h2>6. Contact</h2>
-        <p>For privacy-related questions, contact us at: <strong>auuminer@gmail.com</strong></p>
-        <p>Or visit our app landing page: <a href="index.html">Kwan & Som</a></p>
+        <h2>6. Your Rights & Control</h2>
+        <ul>
+            <li><strong>Revoke access anytime:</strong> Go to TikTok &gt; Settings &gt; Security &gt; Apps &amp; Sessions, find "Kwan &amp; Som", and tap Remove. All temporary session data is immediately discarded.</li>
+            <li><strong>No account required:</strong> The App does not maintain its own user accounts or databases. Your relationship is solely through TikTok OAuth.</li>
+            <li><strong>Transparency:</strong> You can see exactly which scopes you're authorizing on TikTok's OAuth consent screen before granting access.</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>The App is not directed at children under 13. We do not knowingly collect information from children. The App's content is general-audience pet entertainment.</p>
+
+        <h2>8. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy. Material changes will be reflected in the "Last updated" date. Continued use after changes constitutes acceptance.</p>
+
+        <h2>9. Contact</h2>
+        <p>For privacy-related questions or data requests, contact us at: <strong>auuminer@gmail.com</strong></p>
+        <p>Developer: Auuminer &middot; App: Kwan &amp; Som (ID: 7644788406140028936)</p>
+
+        <a href="index.html" class="back">Back to Kwan &amp; Som</a>
     </div>
 </body>
 </html>

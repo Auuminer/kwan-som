@@ -1,65 +1,84 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service — Kwan & Som</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-               background: #f9f9f9; color: #333; line-height: 1.7; }
-        .container { max-width: 720px; margin: 0 auto; padding: 48px 24px; }
-        h1 { font-size: 28px; margin-bottom: 8px; color: #ff7e5f; }
-        .date { color: #999; font-size: 14px; margin-bottom: 32px; }
-        h2 { font-size: 20px; margin: 32px 0 12px; color: #444; }
-        p, li { margin-bottom: 12px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+               background: #fafafa; color: #333; line-height: 1.75; }
+        .container { max-width: 740px; margin: 0 auto; padding: 56px 28px; }
+        .header { border-bottom: 3px solid #FF6B35; padding-bottom: 20px; margin-bottom: 36px; }
+        h1 { font-size: 30px; color: #222; font-weight: 700; }
+        .meta { color: #888; font-size: 14px; margin-top: 6px; }
+        h2 { font-size: 20px; margin: 36px 0 12px; color: #333; font-weight: 600; }
+        p, li { margin-bottom: 12px; font-size: 15px; color: #444; }
         ul { padding-left: 24px; }
-        a { color: #ff7e5f; }
+        a { color: #FF6B35; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-top: 40px; padding: 10px 24px; 
+                background: #FF6B35; color: white; border-radius: 8px; font-weight: 600; 
+                font-size: 14px; text-decoration: none; }
+        .back:hover { background: #e85d2c; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📄 Terms of Service</h1>
-        <p class="date">Last updated: June 3, 2026</p>
+        <div class="header">
+            <h1>Terms of Service</h1>
+            <p class="meta">Kwan &amp; Som &middot; Last updated: June 11, 2026</p>
+        </div>
 
         <h2>1. Acceptance of Terms</h2>
-        <p>By using the Kwan & Som application ("the App"), you agree to these Terms of Service. If you do not agree, please do not use the App.</p>
+        <p>By using the Kwan &amp; Som application ("the App"), you agree to these Terms of Service. If you do not agree, please do not use the App or revoke access through your TikTok account settings.</p>
 
         <h2>2. Service Description</h2>
-        <p>Kwan & Som is a content creation and publishing application that helps creators produce and publish AI-animated pet content. The App uses AI technology to generate visuals and assist with storytelling, then publishes the resulting content to the creator's social media account.</p>
+        <p>Kwan &amp; Som is a content creation and publishing application. It helps creators produce and publish AI-animated pet-themed short videos featuring original characters Kwan (an orange tabby kitten) and Som (a playful puppy). The App integrates with the TikTok Content Posting API to publish content directly to the authenticated creator's account.</p>
 
         <h2>3. User Responsibilities</h2>
         <ul>
             <li>You must have the legal right to publish all content uploaded through the App.</li>
-            <li>You are responsible for ensuring all published content complies with platform terms and community guidelines.</li>
-            <li>You must not use the App to publish spam, misleading, or harmful content.</li>
-            <li>You are responsible for maintaining the security of your account credentials.</li>
+            <li>You are responsible for ensuring all published content complies with TikTok's Terms of Service and Community Guidelines.</li>
+            <li>You must not use the App to publish spam, misleading, harmful, or infringing content.</li>
+            <li>You are responsible for maintaining the security of your account credentials and OAuth tokens.</li>
+            <li>You must be at least 13 years old (or the applicable age of digital consent in your jurisdiction) to use the App.</li>
         </ul>
 
         <h2>4. Intellectual Property</h2>
         <ul>
             <li><strong>Your Content:</strong> All videos, images, and text you publish through the App remain your intellectual property. The App claims no ownership over user-generated content.</li>
-            <li><strong>App Characters:</strong> The Kwan & Som characters (the puppy and kitten), their designs, and associated branding are original creations and protected intellectual property of the App creators.</li>
-            <li><strong>AI-Generated Assets:</strong> Visuals generated through AI tools are used as creative assistance; final published content is curated and approved by you as the creator.</li>
+            <li><strong>App Characters:</strong> The Kwan &amp; Som characters (the kitten and puppy), their names, designs, and associated branding are original creations and protected intellectual property of the App creator.</li>
+            <li><strong>AI-Generated Assets:</strong> Visuals generated through AI tools are used as creative assistance. Final published content is curated and approved by you as the creator.</li>
         </ul>
 
-        <h2>5. Limitation of Liability</h2>
-        <p>The App is provided "as is" without warranties of any kind. We are not liable for:</p>
+        <h2>5. API Scope Usage</h2>
+        <p>The App uses TikTok API scopes solely for content publishing:</p>
         <ul>
-            <li>Content removed by platform moderation systems</li>
-            <li>Account actions taken by the platform under their terms</li>
-            <li>Service interruptions or technical issues beyond our control</li>
+            <li><strong>user.info.basic</strong> — Display account name within the App interface.</li>
+            <li><strong>user.info.stats</strong> — Provide content performance insights to the creator.</li>
+            <li><strong>video.upload / video.publish</strong> — Core functionality: upload and publish videos.</li>
+        </ul>
+        <p>All access is session-only. No data is permanently stored, shared, or sold.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>The App is provided "as is" without warranties of any kind, express or implied. We are not liable for:</p>
+        <ul>
+            <li>Content removed or accounts actioned by TikTok under their own terms</li>
+            <li>Service interruptions, technical issues, or API changes beyond our control</li>
+            <li>Any indirect, incidental, or consequential damages arising from App usage</li>
         </ul>
 
-        <h2>6. Termination</h2>
-        <p>We reserve the right to suspend or terminate access to the App for violations of these terms. You may stop using the App and revoke access at any time through your account settings.</p>
+        <h2>7. Termination</h2>
+        <p>We reserve the right to suspend or terminate access for violations of these terms. You may stop using the App and revoke access at any time through TikTok Settings &gt; Security &gt; Apps &amp; Sessions.</p>
 
-        <h2>7. Changes to Terms</h2>
-        <p>We may update these terms from time to time. Continued use of the App after changes constitutes acceptance of the new terms.</p>
+        <h2>8. Changes to Terms</h2>
+        <p>We may update these terms. Continued use after changes constitutes acceptance. Material changes will be reflected in the "Last updated" date above.</p>
 
-        <h2>8. Contact</h2>
+        <h2>9. Contact</h2>
         <p>For questions about these Terms, contact: <strong>auuminer@gmail.com</strong></p>
-        <p><a href="index.html">← Back to Kwan & Som</a></p>
+
+        <a href="index.html" class="back">Back to Kwan &amp; Som</a>
     </div>
 </body>
 </html>
